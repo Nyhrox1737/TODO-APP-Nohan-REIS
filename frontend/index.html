@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .add-form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .add-form input {
+            flex: 1;
+            padding: 8px;
+            font-size: 16px;
+        }
+        .add-form button {
+            padding: 8px 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .todo-list {
+            list-style: none;
+            padding: 0;
+        }
+        .todo-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .todo-item.done span {
+            text-decoration: line-through;
+            color: grey;
+        }
+        .todo-item span {
+            flex: 1;
+        }
+        .todo-item button {
+            padding: 4px 10px;
+            cursor: pointer;
+        }
+        .error-message {
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Todo App</h1>
+
+    <div class="add-form">
+        <input type="text" id="todoInput" placeholder="Nouvelle tache...">
+        <button id="addBtn">Ajouter</button>
+    </div>
+
+    <p class="error-message" id="errorMsg"></p>
+
+    <ul class="todo-list" id="todoList"></ul>
+
+    <script src="./script.js"></script>
+</body>
+</html>
